@@ -32,7 +32,7 @@ acesso (a senha do sistema é Pa$$w0rd). O segundo modo é o modo de votos, onde
 usuário informa 1 para votar no primeiro candidato e 2 para votar no segundo candidato. O
 terceiro modo, é o modo de apuração de votos, onde o sistema verifica qual candidato tem
 mais votos. Caso o número de votos seja igual, o sistema deve imprimir a mensagem
-&quot;SEGUNDO TURNO&quot;, caso contrário deve imprimir o nome do candidato vencedor e o
+"SEGUNDO TURNO", caso contrário deve imprimir o nome do candidato vencedor e o
 número de votos que ele obteve.
 
 
@@ -49,18 +49,19 @@ que a soma dos outros dois.
 
 
 10)Ler 02 números reais do teclado (A e B), verificar e imprimir qual deles é maior, ou a
-mensagem &quot;A = B&quot; caso sejam iguais.
+mensagem "A = B" caso sejam iguais.
 
 
 11)Ler 02 números inteiros do teclado. Se o segundo for diferente de zero, calcular e
 imprimir o quociente do primeiro pelo segundo. Caso contrário,
-imprimir a mensagem: &quot;DIVISÃO POR ZERO&quot;.
+imprimir a mensagem: "DIVISÃO POR ZERO".
 
 
 12)Ler 4 números inteiros e calcular a soma dos que forem
 
 
 13)Ler 10 valores e determinar o maior dentre eles.
+
 
 14)Ler três valores e colocá-los em ordem.
 

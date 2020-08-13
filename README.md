@@ -57,7 +57,7 @@ imprimir o quociente do primeiro pelo segundo. Caso contrário,
 imprimir a mensagem: "DIVISÃO POR ZERO".
 
 
-12)Ler 4 números inteiros e calcular a soma dos que forem
+12)Ler 4 números inteiros e calcular a soma dos que forem par
 
 
 13)Ler 10 valores e determinar o maior dentre eles.
@@ -72,7 +72,7 @@ imprimir a mensagem: "DIVISÃO POR ZERO".
 16)Ler o salário de uma pessoa e imprimir o Salário Líquido de acordo com a redução do
 imposto descrito ao lado:
 Menor ou igual a R$ 600,00 - ISENTO
-Maior que R$ 600,00 e menor ou igual a 100 - 20% desconto
+Maior que R$ 600,00 e menor ou igual a R$1000 - 20% desconto
 Maior que R$ 1.200,00 e menor ou igual a R$2000 - 25% desconto
 Maior que R$ 2.000,00 - 30% desconto
 

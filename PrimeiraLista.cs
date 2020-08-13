@@ -4,7 +4,7 @@ namespace primeira_lista
 {
     class Program
     {
-        static void Exercise1a()
+        static void Exercise01a()
         {
             Console.WriteLine("Crescente");
             for (int counter = 1; counter < 11; counter++)
@@ -13,7 +13,7 @@ namespace primeira_lista
             }
         }
             
-        static void Exercise1b()
+        static void Exercise01b()
         {
             Console.WriteLine("decrescente");
             for (int counter = 10; counter > 0; counter--)
@@ -22,12 +22,12 @@ namespace primeira_lista
             }
         }     
 
-        static void Exercise1c()
+        static void Exercise01c()
         {
-
+                Console.WriteLine("Crescente apenas pares: ");
              for (int counter = 2; counter < 11; counter += 2)
              {
-             Console.WriteLine(counter);
+                Console.WriteLine(counter);
              }
         }
         
@@ -68,7 +68,7 @@ namespace primeira_lista
             {
 				sum += counter;
             }
-			Console.WriteLine("A soma dos números inteiros entre 1 e 100 é: "+ sum);
+			    Console.WriteLine("A soma dos números inteiros entre 1 e 100 é: "+ sum);
              
         }
 
@@ -86,11 +86,18 @@ namespace primeira_lista
             //     counter =+2;
             // }
             
-            ////Método for
+            //Método for crescente
             for (int Counter = 1; Counter < 200; Counter = Counter+=2)
             {
-            Console.WriteLine(Counter);
+                Console.WriteLine(Counter);
             }
+
+            // ////Método for decrescente
+            // Console.WriteLine("ímpares menores que 200");
+            // for (int counter=199; counter >=1; counter = counter-=2)
+            // {
+            //     Console.WriteLine(counter);
+            // }
         }
 
         static void Exercise04()
@@ -111,9 +118,9 @@ namespace primeira_lista
         }   
 
         static void Exercise05()
-        //Criar um algoritmo que peça o nome e a idade de 5 mulheres. Após informar estes dados,
-        //o programa deve mostrar apenas porcentagem de mulheres que estão com idade entre 18 e 35.
         {
+            //Criar um algoritmo que peça o nome e a idade de 5 mulheres. Após informar estes dados,
+            //o programa deve mostrar apenas porcentagem de mulheres que estão com idade entre 18 e 35.
             int counter=0;
             for (int i = 0; i < 5; i++)
             {
@@ -206,7 +213,7 @@ namespace primeira_lista
             //Quantos fuma por dia (amount)
             //preço de um maço (7 reais)
             //um maço têm 20 cigarros
-
+            Console.WriteLine("Gastos com cigarros");
             int years, amount, days;
             double unitprice, packprice, totalcost;
             Console.WriteLine ("A quantos anos você fuma? ");
@@ -217,8 +224,8 @@ namespace primeira_lista
             unitprice = Double.Parse (Console.ReadLine());
             days = years*365;
             packprice = 20/unitprice;                    
-            totalcost = (days*amount)*packprice;                
-            Console.WriteLine ("Você já gastou em cigarros o valor de: \n" + totalcost.ToString("0.00"));
+            totalcost = (days*amount)*packprice;
+            Console.WriteLine("Você já gastou com cigarros o valor de: \n {0,15:c}", totalcost);
             // o valor {0,15:c} faz com que a variável seja impressa no formato monetário
         }        
 
@@ -286,22 +293,21 @@ namespace primeira_lista
         static void Exercise11()
         {
 
-            int x, y, divisão;
-            Console.WriteLine("Digite um valor para A");
-            x = int.Parse(Console.ReadLine());
-            Console.WriteLine("Digite um valor para B");
-            y = int.Parse(Console.ReadLine());
+            int x, y, division;
+            Console.WriteLine("Digite um valor para X");
+            x = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Digite um valor para Y");
+            y = Int32.Parse(Console.ReadLine());
 
             if (y != 0)
             {
-                divisão = x / y;
-                Console.WriteLine("O resultado da divisão de A por B é: "+ divisão);
+                division = x / y;
+                Console.WriteLine("O resultado da divisão de X por Y é: "+ division);
             }
             else
             {
-                Console.WriteLine("Não há divisão por zero.");
+                Console.WriteLine("Divisão por zero.");
             }
-                Console.ReadKey();
         }
 
         static void Exercise12()
@@ -317,10 +323,8 @@ namespace primeira_lista
                 {
                     soma = soma + a;
                 }
-            }
-                    Console.WriteLine();           
-                    Console.WriteLine("A soma dos números pares é = "+ soma);
-                    Console.ReadKey();
+            }          
+                    Console.WriteLine("\n A soma dos números pares é = "+ soma +"\n");
         }
 
         static void Exercise13()
@@ -330,7 +334,7 @@ namespace primeira_lista
 
             for (int counter = 0; counter < 10; counter++)
             {
-                System.Console.WriteLine("Forneça um número");
+                System.Console.WriteLine("Informe um número");
                 var input = Int32.Parse(Console.ReadLine());
 
                 if (input > biggestNumber)
@@ -338,9 +342,7 @@ namespace primeira_lista
                     biggestNumber = input;
                 }
             }
-
-            System.Console.WriteLine("O maior número é:");
-            System.Console.WriteLine(biggestNumber);
+                System.Console.WriteLine("\nO maior número informado foi: "+ biggestNumber);
         }    
 
         static void Exercise14()
@@ -384,8 +386,59 @@ namespace primeira_lista
             {
                 Console.WriteLine(c +", "+ b +", " +a);
             }
-                    Console.ReadKey();
-        }    
+        }  
+
+        static void Exercise15()
+        {
+            //Ler 10 números e imprimir quantos são múltiplos de 3 e quantos são múltiplos de 5.
+            int counter3=0;
+            int counter5=0;
+            for (int i=0; i<10; i++)
+            {
+                int num;
+                Console.WriteLine("Informe um número inteiro: ");
+                num = Int32.Parse(Console.ReadLine());                        
+                if (num % 3 == 0)
+                {
+                    counter3++;                     
+                }
+                if (num % 5 == 0)
+                {
+                    counter5++;                    
+                }
+            }
+
+            Console.WriteLine("foram informados: "+counter3+ " números multiplos de 3"); 
+            Console.WriteLine("Foram informados: "+counter5+ " números multiplos de 5");
+            
+        }
+
+        static void Exercise16()
+        {
+            double salary, netSalary;
+            Console.WriteLine("Informe o valor do salário bruto: ");
+            salary = Double.Parse (Console.ReadLine());
+            if (salary<=600)
+            {
+                netSalary=salary;
+                Console.WriteLine("Isento de desconto. \nO valor do salário líquido é de: {0,15:c}",netSalary);
+            }
+            else if (salary>600 && salary<=1000)
+            {
+                netSalary=salary-(salary*0.20);
+                Console.WriteLine("Desconto de 20%. \nO valor do salário líquido é de: {0,15:c}", netSalary);   
+            }
+            if (salary>=1200 && salary<=2000)
+            {
+                netSalary=salary-(salary*0.25);
+                Console.WriteLine("Desconto de 25%. \nO valor do salário líquido é de: {0,15:c}",netSalary);
+            }
+            else if (salary>2000)
+            {
+                netSalary=salary-(salary*0.30);
+                Console.WriteLine("Desconto de 30%. \nO valor do salário líquido é de: {0,15:c}", netSalary);
+            }              
+        }  
 
         static void Exercise17()
         {
@@ -408,11 +461,8 @@ namespace primeira_lista
         }
         static void Main (String[] args)
         {
-            Exercise07();
+            Exercise16();
         }
-
-
-
       
     }        
 }

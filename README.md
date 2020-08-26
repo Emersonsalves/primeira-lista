@@ -1,4 +1,4 @@
-# primeira-lista
+# primeira-lista (Exercises Csharp)
 
 1)Crie um programa que imprima:
 
